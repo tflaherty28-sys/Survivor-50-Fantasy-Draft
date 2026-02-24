@@ -1,0 +1,409 @@
+{
+  "teams": [
+    "Hunter",
+    "Tom",
+    "Molly",
+    "Matt",
+    "Frank",
+    "Dan",
+    "Kathleen"
+  ],
+  "cast": [
+    {
+      "name": "Jenna Lewis-Dougherty",
+      "age": 47,
+      "occupation": "Realtor",
+      "from": "Franklin, New Hampshire",
+      "residence": "Woodland, California",
+      "seasons": [
+        {
+          "season": "Survivor: Borneo",
+          "placement": "3rd"
+        },
+        {
+          "season": "Survivor: All-Stars",
+          "placement": "3rd"
+        }
+      ],
+      "photo": "https://ew.com/thmb/oTSdWpkyFiwpgu6JiQyyvsud254%3D/2000x0/filters%3Ano_upscale%28%29%3Amax_bytes%28150000%29%3Astrip_icc%28%29%3Aformat%28webp%29/Survivor-Jenna-Lewis-Dougherty-2-012326-5a1195db8aa94b2580aeb0f6e4559896.jpg"
+    },
+    {
+      "name": "Colby Donaldson",
+      "age": 50,
+      "occupation": "Television host / actor",
+      "from": "Christoval, Texas",
+      "residence": "Austin, Texas",
+      "seasons": [
+        {
+          "season": "Survivor: The Australian Outback",
+          "placement": "2nd"
+        },
+        {
+          "season": "Survivor: All-Stars",
+          "placement": "12th"
+        },
+        {
+          "season": "Survivor: Heroes vs. Villains",
+          "placement": "5th"
+        }
+      ],
+      "photo": "https://ew.com/thmb/M3yV0kOQGCq-WDyA8VEQhSP6SGU%3D/2000x0/filters%3Ano_upscale%28%29%3Amax_bytes%28150000%29%3Astrip_icc%28%29%3Aformat%28webp%29/Colby-Donaldson-1-012326-8921175e3f044b1ea05aac250612fb54.jpg"
+    },
+    {
+      "name": "Stephenie LaGrossa Kendrick",
+      "age": 44,
+      "occupation": "Pharmaceutical sales",
+      "from": "Philadelphia, Pennsylvania",
+      "residence": "Philadelphia, Pennsylvania",
+      "seasons": [
+        {
+          "season": "Survivor: Palau",
+          "placement": "7th"
+        },
+        {
+          "season": "Survivor: Guatemala",
+          "placement": "2nd"
+        },
+        {
+          "season": "Survivor: Heroes vs. Villains",
+          "placement": "19th"
+        }
+      ],
+      "photo": "https://ew.com/thmb/nX6f1hWoMUqrRDobw7_-w1JKEyA%3D/2000x0/filters%3Ano_upscale%28%29%3Amax_bytes%28150000%29%3Astrip_icc%28%29%3Aformat%28webp%29/Survivor-Stephenie-LaGrossa-Kendrick-3-012326-0a5f7bec2da640a98034859cf0ce88e8.jpg"
+    },
+    {
+      "name": "Cirie Fields",
+      "age": 54,
+      "occupation": "Nurse / surgical director",
+      "from": "Jersey City, New Jersey",
+      "residence": "Jersey City, New Jersey",
+      "seasons": [
+        {
+          "season": "Survivor: Panama",
+          "placement": "4th"
+        },
+        {
+          "season": "Survivor: Micronesia",
+          "placement": "3rd"
+        },
+        {
+          "season": "Survivor: Heroes vs. Villains",
+          "placement": "17th"
+        },
+        {
+          "season": "Survivor: Game Changers",
+          "placement": "6th"
+        }
+      ],
+      "photo": "https://ew.com/thmb/AxefXjtYQaAA3tPfETp1AUiEQxg%3D/2000x0/filters%3Ano_upscale%28%29%3Amax_bytes%28150000%29%3Astrip_icc%28%29%3Aformat%28webp%29/Survivor-Cirie-Fields-3-012326-f4c6ddbbb5ff490083201341c6ad45e5.jpg"
+    },
+    {
+      "name": "Ozzy Lusth",
+      "age": 43,
+      "occupation": "Television personality",
+      "from": "Venice, California",
+      "residence": "Venice, California",
+      "seasons": [
+        {
+          "season": "Survivor: Cook Islands",
+          "placement": "2nd"
+        },
+        {
+          "season": "Survivor: Micronesia",
+          "placement": "9th"
+        },
+        {
+          "season": "Survivor: South Pacific",
+          "placement": "4th"
+        },
+        {
+          "season": "Survivor: Game Changers",
+          "placement": "17th"
+        }
+      ],
+      "photo": "https://ew.com/thmb/hdDkPJaCCMM0-dLtwB9NjYOXbGU%3D/2000x0/filters%3Ano_upscale%28%29%3Amax_bytes%28150000%29%3Astrip_icc%28%29%3Aformat%28webp%29/Ozzy-Lusth-1-012326-f7b6e73f938b40b2833893d21d47be5e.jpg"
+    },
+    {
+      "name": "Benjamin \"Coach\" Wade",
+      "age": 54,
+      "occupation": "Conductor / coach",
+      "from": "Knoxville, Tennessee",
+      "residence": "Susanville, California",
+      "seasons": [
+        {
+          "season": "Survivor: Tocantins",
+          "placement": "5th"
+        },
+        {
+          "season": "Survivor: Heroes vs. Villains",
+          "placement": "12th"
+        },
+        {
+          "season": "Survivor: South Pacific",
+          "placement": "2nd"
+        }
+      ],
+      "photo": "https://ew.com/thmb/ETTQ1VCn5dgZa5T32Y5kBeNjft4%3D/2000x0/filters%3Ano_upscale%28%29%3Amax_bytes%28150000%29%3Astrip_icc%28%29%3Aformat%28webp%29/Benjamin-Coach-Wade-3-012326jpg-9e5b0b0e150f41728eacd6fd0b8cec5f.jpg"
+    },
+    {
+      "name": "Aubry Bracco",
+      "age": 38,
+      "occupation": "Marketing / entrepreneur",
+      "from": "Winchester, Massachusetts",
+      "residence": "Los Angeles, California",
+      "seasons": [
+        {
+          "season": "Survivor: Ka\u00f4h R\u014dng",
+          "placement": "2nd"
+        },
+        {
+          "season": "Survivor: Game Changers",
+          "placement": "5th"
+        },
+        {
+          "season": "Survivor: Edge of Extinction",
+          "placement": "15th"
+        }
+      ],
+      "photo": "https://ew.com/thmb/7V1uyFKOwU5RKfUZYl6-2Sr4jGw%3D/2000x0/filters%3Ano_upscale%28%29%3Amax_bytes%28150000%29%3Astrip_icc%28%29%3Aformat%28webp%29/Survivor-Aubry-Bracco-2-012326-c332c042e52a45b583cc8d585453016b.jpg"
+    },
+    {
+      "name": "Chrissy Hofbeck",
+      "age": 54,
+      "occupation": "Actuary",
+      "from": "Lebanon Township, New Jersey",
+      "residence": "The Villages, Florida",
+      "seasons": [
+        {
+          "season": "Survivor: Heroes vs. Healers vs. Hustlers",
+          "placement": "2nd"
+        }
+      ],
+      "photo": "https://ew.com/thmb/I02AYOfJpDnxyv8AhIrw-BpvJlg%3D/2000x0/filters%3Ano_upscale%28%29%3Amax_bytes%28150000%29%3Astrip_icc%28%29%3Aformat%28webp%29/Survivor-Chrissy-Hofbeck-3-012326-7b5f84272b8c44e89932dac982a9522a.jpg"
+    },
+    {
+      "name": "Christian Hubicki",
+      "age": 39,
+      "occupation": "Robotics professor",
+      "from": "Baltimore, Maryland",
+      "residence": "Tallahassee, Florida",
+      "seasons": [
+        {
+          "season": "Survivor: David vs. Goliath",
+          "placement": "7th"
+        }
+      ],
+      "photo": "https://ew.com/thmb/_Qj_CPIFbSuqp_hjGOyI5OtFG6A%3D/2000x0/filters%3Ano_upscale%28%29%3Amax_bytes%28150000%29%3Astrip_icc%28%29%3Aformat%28webp%29/Survivor-Christian-Hubicki-012326-24ba4d2eead145d593ddfcb955b2d7d2.jpg"
+    },
+    {
+      "name": "Angelina Keeley",
+      "age": 35,
+      "occupation": "Consultant",
+      "from": "Edgewood, Kentucky",
+      "residence": "San Francisco, California",
+      "seasons": [
+        {
+          "season": "Survivor: David vs. Goliath",
+          "placement": "3rd"
+        }
+      ],
+      "photo": "https://ew.com/thmb/0AeYxuw8yr2B8wWjoWiByxhP6LM%3D/2000x0/filters%3Ano_upscale%28%29%3Amax_bytes%28150000%29%3Astrip_icc%28%29%3Aformat%28webp%29/Survivor-Angelina-Keeley-3-012326-62fa115c8b724b6988a07818c7d17a8e.jpg"
+    },
+    {
+      "name": "Mike White",
+      "age": 54,
+      "occupation": "Writer / director / producer",
+      "from": "Pasadena, California",
+      "residence": "Los Angeles, California",
+      "seasons": [
+        {
+          "season": "Survivor: David vs. Goliath",
+          "placement": "2nd"
+        }
+      ],
+      "photo": "https://ew.com/thmb/FQZQPjSN7NxRz21aLSEjE24ztIY%3D/2000x0/filters%3Ano_upscale%28%29%3Amax_bytes%28150000%29%3Astrip_icc%28%29%3Aformat%28webp%29/Mike-White-1-012326-c840e005edcc46feb3e9e3a7b852117d.jpg"
+    },
+    {
+      "name": "Rick Devens",
+      "age": 40,
+      "occupation": "News anchor",
+      "from": "Macon, Georgia",
+      "residence": "Macon, Georgia",
+      "seasons": [
+        {
+          "season": "Survivor: Edge of Extinction",
+          "placement": "4th"
+        }
+      ],
+      "photo": "https://ew.com/thmb/98Q-YppGh_IOonN4tCEuwznWVlY%3D/2000x0/filters%3Ano_upscale%28%29%3Amax_bytes%28150000%29%3Astrip_icc%28%29%3Aformat%28webp%29/Rick-Devens-012326-2df1f25d526d476ba51ac43e6e7534c4.jpg"
+    },
+    {
+      "name": "Jonathan Young",
+      "age": 32,
+      "occupation": "Fitness coach",
+      "from": "Gadsden, Alabama",
+      "residence": "Gulf Shores, Alabama",
+      "seasons": [
+        {
+          "season": "Survivor: 42",
+          "placement": "4th"
+        }
+      ],
+      "photo": "https://ew.com/thmb/K72u8ZRm13YIPOuE1FDxnTzcYqg%3D/2000x0/filters%3Ano_upscale%28%29%3Amax_bytes%28150000%29%3Astrip_icc%28%29%3Aformat%28webp%29/Survivor-Jonathan-Young-3-012326-77f3295044bd4b7b99b7d070c76e41d2.jpg"
+    },
+    {
+      "name": "Emily Flippen",
+      "age": 30,
+      "occupation": "Investment analyst",
+      "from": "McKinney, Texas",
+      "residence": "Laurel, Maryland",
+      "seasons": [
+        {
+          "season": "Survivor: 45",
+          "placement": "7th"
+        }
+      ],
+      "photo": "https://ew.com/thmb/G0a4eFz4w887cs0WR0kHTIba5sU%3D/2000x0/filters%3Ano_upscale%28%29%3Amax_bytes%28150000%29%3Astrip_icc%28%29%3Aformat%28webp%29/Survivor-Emily-Flippen-3-012326-9e932ae092994b22a10353969a54fbaf.jpg"
+    },
+    {
+      "name": "Dee Valladares",
+      "age": 28,
+      "occupation": "Entrepreneur",
+      "from": "Miami, Florida",
+      "residence": "Miami, Florida",
+      "seasons": [
+        {
+          "season": "Survivor: 45",
+          "placement": "1st"
+        }
+      ],
+      "photo": "https://ew.com/thmb/MK0UBVAIzeQsjnAebbv6iU_Y6ZY%3D/2000x0/filters%3Ano_upscale%28%29%3Amax_bytes%28150000%29%3Astrip_icc%28%29%3Aformat%28webp%29/Survivor-Dee-Valladares-3-012326-8c59c5bc8d4944ef875259efb2af532b.jpg"
+    },
+    {
+      "name": "Quintavius \"Q\" Burdette",
+      "age": 31,
+      "occupation": "Real estate broker",
+      "from": "Senatobia, Mississippi",
+      "residence": "Germantown, Tennessee",
+      "seasons": [
+        {
+          "season": "Survivor: 46",
+          "placement": "6th"
+        }
+      ],
+      "photo": "https://ew.com/thmb/rUgxABREQiP8y2tVWqcu4iC5ydE%3D/2000x0/filters%3Ano_upscale%28%29%3Amax_bytes%28150000%29%3Astrip_icc%28%29%3Aformat%28webp%29/Q-Burdette-1-012326-8f39caf44c044631b2986f3cd13ccbd4.jpg"
+    },
+    {
+      "name": "Charlie Davis",
+      "age": 29,
+      "occupation": "Law student",
+      "from": "Manchester, New Hampshire",
+      "residence": "Boston, Massachusetts",
+      "seasons": [
+        {
+          "season": "Survivor: 46",
+          "placement": "2nd"
+        }
+      ],
+      "photo": "https://ew.com/thmb/Ot4xOiqu_XACh966uzFC3EEuHhI%3D/2000x0/filters%3Ano_upscale%28%29%3Amax_bytes%28150000%29%3Astrip_icc%28%29%3Aformat%28webp%29/Charlie-Davis-1-012326-714f15952b894b0bbf3d1fe95711bc6a.jpg"
+    },
+    {
+      "name": "Tiffany Ervin",
+      "age": 34,
+      "occupation": "Artist",
+      "from": "Elizabeth, New Jersey",
+      "residence": "Elizabeth, New Jersey",
+      "seasons": [
+        {
+          "season": "Survivor: 46",
+          "placement": "8th"
+        }
+      ],
+      "photo": "https://ew.com/thmb/uha-Wl27vH2syZHbKyoqZXkQ86o%3D/2000x0/filters%3Ano_upscale%28%29%3Amax_bytes%28150000%29%3Astrip_icc%28%29%3Aformat%28webp%29/Survivor-Tiffany-Ervin-2-012326-52c16e71f32549b0b1e2be673023e395.jpg"
+    },
+    {
+      "name": "Genevieve Mushaluk",
+      "age": 33,
+      "occupation": "Marketing consultant",
+      "from": "Winnipeg, Manitoba, Canada",
+      "residence": "Winnipeg, Manitoba, Canada",
+      "seasons": [
+        {
+          "season": "Survivor: 47",
+          "placement": "5th"
+        }
+      ],
+      "photo": "https://ew.com/thmb/ScWnhKlF3qwb7U9Pgg2hFKEmDQk%3D/2000x0/filters%3Ano_upscale%28%29%3Amax_bytes%28150000%29%3Astrip_icc%28%29%3Aformat%28webp%29/Genevieve-Mushaluk-survivor-012426-d430877a02764731a2286679b1c6a1da.jpg"
+    },
+    {
+      "name": "Kyle Fraser",
+      "age": 32,
+      "occupation": "Attorney",
+      "from": "Philadelphia, Pennsylvania",
+      "residence": "Brooklyn, New York",
+      "seasons": [
+        {
+          "season": "Survivor: 48",
+          "placement": "1st"
+        }
+      ],
+      "photo": "https://ew.com/thmb/ewavXKgvQtjOzelv5mCvZ0BHz5E%3D/2000x0/filters%3Ano_upscale%28%29%3Amax_bytes%28150000%29%3Astrip_icc%28%29%3Aformat%28webp%29/Kyle-Fraser-3-012326-0a0fc9a7c30c4bac89fd672cc1f56fe8.jpg"
+    },
+    {
+      "name": "Joe Hunter",
+      "age": 46,
+      "occupation": "Fire captain",
+      "from": "Vacaville, California",
+      "residence": "West Sacramento, California",
+      "seasons": [
+        {
+          "season": "Survivor: 48",
+          "placement": "3rd"
+        }
+      ],
+      "photo": "https://ew.com/thmb/XsReiT624KCjWge2U_ZRvCU1n98%3D/2000x0/filters%3Ano_upscale%28%29%3Amax_bytes%28150000%29%3Astrip_icc%28%29%3Aformat%28webp%29/Joe-Hunter-012326-285e477872cb49e196436d26aa440ccb.jpg"
+    },
+    {
+      "name": "Kamilla Karthigesu",
+      "age": 31,
+      "occupation": "Software engineer",
+      "from": "Toronto, Ontario, Canada",
+      "residence": "Foster City, California",
+      "seasons": [
+        {
+          "season": "Survivor: 48",
+          "placement": "4th"
+        }
+      ],
+      "photo": "https://ew.com/thmb/bxIsMCQ7hG2EIBs_i0lEzC_uKVU%3D/2000x0/filters%3Ano_upscale%28%29%3Amax_bytes%28150000%29%3Astrip_icc%28%29%3Aformat%28webp%29/Survivor-Kamilla-Karthigesu-3-012326-d26474ce9c664a0d8b7c571695b60e4a.jpg"
+    },
+    {
+      "name": "Savannah Louie",
+      "age": 31,
+      "occupation": "Marketing specialist",
+      "from": "Walnut Creek, California",
+      "residence": "Atlanta, Georgia",
+      "seasons": [
+        {
+          "season": "Survivor: 49",
+          "placement": "1st"
+        }
+      ],
+      "photo": "https://ew.com/thmb/7IXIqsx_1qnz4JYYpIGqBliCPP0%3D/2000x0/filters%3Ano_upscale%28%29%3Amax_bytes%28150000%29%3Astrip_icc%28%29%3Aformat%28webp%29/Savannah-Louie-012326-8978b66cd45b4acfbb5163e77d818283.jpg"
+    },
+    {
+      "name": "Rizo Velovic",
+      "age": 26,
+      "occupation": "Tech sales",
+      "from": "Yonkers, New York",
+      "residence": "Yonkers, New York",
+      "seasons": [
+        {
+          "season": "Survivor: 49",
+          "placement": "4th"
+        }
+      ],
+      "photo": "https://ew.com/thmb/FuGMm9Pd2VEwBUxQeEPFmjlPW5M%3D/2000x0/filters%3Ano_upscale%28%29%3Amax_bytes%28150000%29%3Astrip_icc%28%29%3Aformat%28webp%29/Rizo-Velovic-1-012326-6ee0348816af4da1aff88a63fea5c079.jpg"
+    }
+  ]
+}
