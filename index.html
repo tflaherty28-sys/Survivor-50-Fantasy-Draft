@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Survivor 50 — Jungle Draft</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<style>
+:root{--jungle-dark:#071812;--jungle-green:#174033;--leaf:#2f7a5c;--sand:#c6a96b;--torch:#ff9f1c;--text:#f5f3ea;--safeB: env(safe-area-inset-bottom, 0px);--safeT: env(safe-area-inset-top, 0px);}
+body{margin:0;font-family:system-ui,-apple-system,"Trebuchet MS",sans-serif;color:var(--text);background:radial-gradient(circle at 20% 20%, rgba(255,159,28,.18), transparent 42%),radial-gradient(circle at 78% 30%, rgba(47,122,92,.30), transparent 45%),radial-gradient(circle at 65% 85%, rgba(198,169,107,.10), transparent 45%),linear-gradient(160deg,var(--jungle-dark),var(--jungle-green));min-height:100vh;padding-bottom:calc(110px + var(--safeB));position:relative;}
+body::before{content:"";position:fixed;inset:-40px;pointer-events:none;opacity:.18;mix-blend-mode:overlay;background-image:radial-gradient(circle at 12% 18%, rgba(255,255,255,.10) 0 2px, transparent 3px),radial-gradient(circle at 72% 30%, rgba(0,0,0,.18) 0 2px, transparent 3px),radial-gradient(circle at 35% 70%, rgba(255,255,255,.06) 0 2px, transparent 3px),linear-gradient(115deg, rgba(0,0,0,.0) 0%, rgba(0,0,0,.25) 48%, rgba(0,0,0,.0) 100%),repeating-linear-gradient(135deg, rgba(255,255,255,.02) 0 8px, rgba(0,0,0,.02) 8px 16px);filter:blur(.6px);z-index:0;}
+header{padding:calc(18px + var(--safeT)) 16px 12px;text-align:center;background:rgba(0,0,0,.40);border-bottom:2px solid rgba(198,169,107,.9);letter-spacing:1.5px;position:sticky;top:0;z-index:5;backdrop-filter:blur(10px);}
+h1{margin:0;font-size:20px;text-transform:uppercase;}
+.sub{margin-top:6px;font-size:12px;color:rgba(245,243,234,.8);}
+.banner{margin:12px 16px 0;padding:10px 12px;border-radius:14px;background:rgba(255,159,28,.10);border:1px solid rgba(255,159,28,.22);color:rgba(245,243,234,.90);font-size:12px;}
+.toprow{display:flex;gap:10px;padding:12px 16px 0;align-items:center;justify-content:space-between;flex-wrap:wrap;}
+.toggle{display:flex;align-items:center;gap:8px;font-size:12px;opacity:.9;background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.10);padding:10px 12px;border-radius:999px;}
+.toggle input{transform:scale(1.2);}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;padding:16px;position:relative;z-index:1;}
+.team{background:rgba(0,0,0,.45);border:2px solid rgba(198,169,107,.9);border-radius:18px;overflow:hidden;box-shadow:0 10px 28px rgba(0,0,0,.55);}
+.team-header{background:linear-gradient(90deg, rgba(47,122,92,1), rgba(23,64,51,1));padding:10px 10px;font-weight:900;border-bottom:1px solid rgba(198,169,107,.9);display:flex;justify-content:space-between;align-items:center;gap:8px;}
+.team-header .name{flex:1;text-align:left;}
+.team-header .count{font-size:12px;opacity:.9;white-space:nowrap;}
+.player{display:flex;gap:10px;padding:10px;align-items:center;border-bottom:1px solid rgba(255,255,255,.08);}
+.avatar{width:44px;height:56px;border-radius:12px;overflow:hidden;border:1px solid rgba(198,169,107,.9);background:#000;flex:0 0 auto;}
+.avatar img{width:100%;height:100%;object-fit:contain;object-position:top;background:#000;}
+.pinfo{display:flex;flex-direction:column;gap:2px;}
+.pname{font-size:13px;font-weight:900;line-height:1.15;}
+.pmeta{font-size:11px;opacity:.80;line-height:1.15;}
+.empty{padding:12px 10px;font-size:12px;opacity:.65;}
+.controls{position:fixed;bottom:0;left:0;right:0;background:rgba(0,0,0,.72);display:flex;gap:10px;padding:12px 12px calc(12px + var(--safeB));border-top:2px solid rgba(198,169,107,.9);z-index:10;backdrop-filter:blur(12px);}
+@keyframes torchFlicker{0%{box-shadow:0 0 18px rgba(255,159,28,.55),0 0 44px rgba(255,159,28,.28);filter:brightness(1);transform:translateY(0)}25%{box-shadow:0 0 22px rgba(255,159,28,.62),0 0 50px rgba(255,159,28,.30);filter:brightness(1.05);transform:translateY(-1px)}50%{box-shadow:0 0 16px rgba(255,159,28,.50),0 0 38px rgba(255,159,28,.24);filter:brightness(.98);transform:translateY(0)}75%{box-shadow:0 0 26px rgba(255,159,28,.70),0 0 56px rgba(255,159,28,.34);filter:brightness(1.08);transform:translateY(-1px)}100%{box-shadow:0 0 18px rgba(255,159,28,.55),0 0 44px rgba(255,159,28,.28);filter:brightness(1);transform:translateY(0)}}
+button{flex:1;padding:14px 14px;border-radius:16px;border:none;font-weight:1000;font-size:16px;cursor:pointer;-webkit-tap-highlight-color:transparent;}
+.draw{background:var(--torch);color:#120700;animation:torchFlicker 1.4s infinite;}
+.undo{background:rgba(255,255,255,.16);color:white;}
+.reset{background:rgba(122,28,28,.85);color:white;}
+button:disabled{opacity:.45;cursor:not-allowed;animation:none;}
+.smallbtn{font-size:13px;padding:10px 12px;border-radius:12px;}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.82);display:none;align-items:center;justify-content:center;padding:16px;z-index:20;}
+.modal-content{background:linear-gradient(180deg, rgba(23,64,51,.96), rgba(7,24,18,.96));border:2px solid rgba(198,169,107,.9);border-radius:22px;width:min(520px,100%);padding:14px;box-shadow:0 18px 60px rgba(0,0,0,.65);}
+.modal-top{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:4px 4px 10px;}
+.modal-top .title{font-size:12px;font-weight:1000;letter-spacing:1.4px;text-transform:uppercase;opacity:.85;}
+.modal-img{width:100%;height:340px;object-fit:contain;object-position:top;border-radius:16px;background:#000;border:1px solid rgba(198,169,107,.75);}
+.modal h2{margin:10px 4px 6px;font-size:22px;}
+.modal .info{margin:0 4px 10px;font-size:13px;opacity:.88;line-height:1.35;}
+.modal .pillrow{display:flex;gap:8px;flex-wrap:wrap;margin:0 4px 10px;}
+.pill{font-size:12px;padding:8px 10px;border-radius:999px;background:rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.10);opacity:.92;}
+.modal .actions{display:flex;gap:10px;padding:0 4px 4px;}
+.assign{background:var(--torch);color:#120700;flex:1;animation:torchFlicker 1.4s infinite;}
+.redraw{background:rgba(255,255,255,.16);color:var(--text);flex:1;}
+.show{display:flex;}
+</style>
+</head>
+<body>
+<header>
+  <h1>🏝 Survivor 50 — Jungle Draft 🏝</h1>
+  <div class="sub">7 teams • 3 picks each • last 3 castaways stay undrafted</div>
+</header>
+
+<div class="toprow">
+  <div class="toggle"><input type="checkbox" id="soundToggle" checked><div>Sound effects</div></div>
+</div>
+
+<div class="banner" id="statusBanner">Loading…</div>
+
+<main><div class="grid" id="board"></div></main>
+
+<div class="controls">
+  <button class="draw" id="btnDraw">Draw</button>
+  <button class="undo" id="btnUndo">Undo</button>
+  <button class="reset" id="btnReset">Reset</button>
+</div>
+
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <div class="modal-top">
+      <div class="title">Castaway Reveal</div>
+      <button class="smallbtn undo" id="btnClose">Close</button>
+    </div>
+    <img class="modal-img" id="mImg" alt="">
+    <h2 id="mName">—</h2>
+    <div class="pillrow">
+      <div class="pill" id="mAge">Age: —</div>
+      <div class="pill" id="mOcc">Occupation: —</div>
+    </div>
+    <div class="info" id="mInfo">—</div>
+    <div class="info" id="mHistory"></div>
+    <div class="actions">
+      <button class="assign" id="btnAssign">Assign</button>
+      <button class="redraw" id="btnRedraw">Redraw</button>
+    </div>
+  </div>
+</div>
+
+<script>
+let data=null, state=null, current=null;
+const LS_KEY="survivor50_jungle_draft_v3";
+const TEAM_LIMIT=3;
+
+function freshState(){return {assigned:{},order:[]};}
+function loadState(){try{const raw=localStorage.getItem(LS_KEY);if(!raw)return freshState();const st=JSON.parse(raw);if(!st||!st.assigned||!st.order)return freshState();return st;}catch(e){return freshState();}}
+function saveState(){localStorage.setItem(LS_KEY, JSON.stringify(state));}
+const $=(id)=>document.getElementById(id);
+
+function teamCounts(){
+  const c={}; data.teams.forEach(t=>c[t]=0);
+  Object.values(state.assigned).forEach(t=>{ if(c[t]!==undefined) c[t]+=1; });
+  return c;
+}
+function remainingCast(){ return data.cast.filter(p=>!state.assigned[p.name]); }
+function eligibleTeams(){ const c=teamCounts(); return data.teams.filter(t=>c[t]<TEAM_LIMIT); }
+function pickRandom(arr){ return arr[Math.floor(Math.random()*arr.length)]; }
+
+let audioCtx=null;
+function ensureAudio(){ if(!$("soundToggle").checked) return null;
+  if(!audioCtx) audioCtx=new (window.AudioContext||window.webkitAudioContext)();
+  if(audioCtx.state==="suspended") audioCtx.resume();
+  return audioCtx;
+}
+function beep(freq,dur,type="sine",gain=0.22){
+  const ctx=ensureAudio(); if(!ctx) return;
+  const o=ctx.createOscillator(), g=ctx.createGain();
+  o.type=type; o.frequency.value=freq; g.gain.value=gain;
+  o.connect(g); g.connect(ctx.destination);
+  o.start(); o.stop(ctx.currentTime+dur);
+}
+function drumroll(){
+  const ctx=ensureAudio(); if(!ctx) return;
+  const bufferSize=2*ctx.sampleRate;
+  const noiseBuffer=ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+  const out=noiseBuffer.getChannelData(0);
+  for(let i=0;i<bufferSize;i++) out[i]=Math.random()*2-1;
+  const noise=ctx.createBufferSource(); noise.buffer=noiseBuffer;
+  const filter=ctx.createBiquadFilter(); filter.type="bandpass"; filter.frequency.value=170;
+  const gain=ctx.createGain();
+  gain.gain.setValueAtTime(0.001, ctx.currentTime);
+  gain.gain.exponentialRampToValueAtTime(0.14, ctx.currentTime+0.25);
+  gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime+0.85);
+  noise.connect(filter); filter.connect(gain); gain.connect(ctx.destination);
+  noise.start(); noise.stop(ctx.currentTime+0.9);
+}
+function sting(){
+  const ctx=ensureAudio(); if(!ctx) return;
+  beep(392,0.10,"square",0.14);
+  setTimeout(()=>beep(523.25,0.12,"square",0.14),90);
+  setTimeout(()=>beep(659.25,0.14,"square",0.14),210);
+}
+
+function renderBanner(){
+  const totalPicks=data.teams.length*TEAM_LIMIT;
+  const picked=Object.keys(state.assigned).length;
+  const remainingPicks=Math.max(0,totalPicks-picked);
+  const undraftedTarget=data.cast.length-totalPicks;
+  const rem=remainingCast().length;
+  const fullTeams=data.teams.filter(t=>teamCounts()[t]>=TEAM_LIMIT).length;
+
+  if(remainingPicks===0){
+    $("statusBanner").innerHTML=`✅ Draft complete — ${undraftedTarget} castaway${undraftedTarget===1?"":"s"} left undrafted.`;
+    $("btnDraw").disabled=true;
+    return;
+  }
+  $("btnDraw").disabled=false;
+  $("statusBanner").innerHTML=`Picks left: <b>${remainingPicks}</b> • Castaways remaining: <b>${rem}</b> • Teams full: <b>${fullTeams}/${data.teams.length}</b>`;
+}
+
+function renderBoard(){
+  const board=$("board"); board.innerHTML="";
+  const counts=teamCounts();
+  data.teams.forEach(team=>{
+    const div=document.createElement("div");
+    div.className="team";
+    div.innerHTML=`<div class="team-header"><div class="name">${team}</div><div class="count">${counts[team]}/${TEAM_LIMIT}</div></div>`;
+    const picks=Object.entries(state.assigned).filter(([n,t])=>t===team).map(([n])=>data.cast.find(x=>x.name===n)).filter(Boolean);
+    if(picks.length===0){
+      const e=document.createElement("div"); e.className="empty"; e.textContent="— no castaways yet —"; div.appendChild(e);
+    }else{
+      picks.forEach(p=>{
+        const seasons=(p.seasons||[]).map(s=>s.season.replace("Survivor: ","")).join(", ");
+        const row=document.createElement("div");
+        row.className="player";
+        row.innerHTML=`<div class="avatar"><img src="${p.photo}" alt="${p.name}"></div><div class="pinfo"><div class="pname">${p.name}</div><div class="pmeta">${seasons}</div></div>`;
+        div.appendChild(row);
+      });
+    }
+    board.appendChild(div);
+  });
+  renderBanner();
+}
+
+function openModal(){ $("modal").classList.add("show"); document.body.style.overflow="hidden"; }
+function closeModal(){ $("modal").classList.remove("show"); document.body.style.overflow=""; }
+
+function renderModal(p){
+  current=p;
+  $("mImg").src=p.photo||""; $("mImg").alt=p.name||"";
+  $("mName").textContent=p.name||"—";
+  $("mAge").textContent=`Age: ${p.age??"—"}`;
+  $("mOcc").textContent=`Occupation: ${p.occupation??"—"}`;
+  const loc=`${p.from??"—"}${p.residence?(" • Now in "+p.residence):""}`;
+  $("mInfo").textContent=loc;
+  const hist=(p.seasons||[]).map(s=>`${s.season} — ${s.placement}`).join(" | ");
+  $("mHistory").textContent=hist?("Survivor history: "+hist):"";
+}
+
+function canAssign(){
+  const totalPicks=data.teams.length*TEAM_LIMIT;
+  const picked=Object.keys(state.assigned).length;
+  return eligibleTeams().length>0 && picked<totalPicks;
+}
+
+function draw(){
+  ensureAudio();
+  const totalPicks=data.teams.length*TEAM_LIMIT;
+  const picked=Object.keys(state.assigned).length;
+  if(picked>=totalPicks){ alert("Draft is complete. Reset to start again."); return; }
+  const rem=remainingCast();
+  if(rem.length===0){ alert("No castaways remaining."); return; }
+  drumroll();
+  renderModal(pickRandom(rem));
+  $("btnAssign").disabled=!canAssign();
+  openModal();
+}
+function redraw(){
+  ensureAudio();
+  beep(330,0.08,"square",0.10);
+  const rem=remainingCast(); if(rem.length===0) return;
+  renderModal(pickRandom(rem));
+  $("btnAssign").disabled=!canAssign();
+}
+function assign(){
+  if(!current) return;
+  const totalPicks=data.teams.length*TEAM_LIMIT;
+  const picked=Object.keys(state.assigned).length;
+  if(picked>=totalPicks){ alert("Draft is complete. Reset to start again."); closeModal(); return; }
+  const ok=eligibleTeams();
+  if(ok.length===0){ alert("All teams are full (3 picks each)."); closeModal(); return; }
+  const team=pickRandom(ok);
+  state.assigned[current.name]=team;
+  state.order.push({cast:current.name,team,ts:Date.now()});
+  saveState();
+  sting();
+  closeModal();
+  current=null;
+  renderBoard();
+}
+function undo(){
+  const last=state.order.pop();
+  if(!last){ alert("Nothing to undo."); return; }
+  delete state.assigned[last.cast];
+  saveState();
+  beep(220,0.10,"sawtooth",0.10);
+  renderBoard();
+}
+function resetDraft(){
+  if(!confirm("Reset the entire draft on this device?")) return;
+  state=freshState(); saveState(); renderBoard();
+}
+
+document.addEventListener("DOMContentLoaded", async ()=>{
+  data=await fetch("cast.json").then(r=>r.json());
+  state=loadState();
+  renderBoard();
+  $("btnDraw").addEventListener("click", draw);
+  $("btnUndo").addEventListener("click", undo);
+  $("btnReset").addEventListener("click", resetDraft);
+  $("btnClose").addEventListener("click", closeModal);
+  $("btnRedraw").addEventListener("click", redraw);
+  $("btnAssign").addEventListener("click", assign);
+  $("modal").addEventListener("click", (e)=>{ if(e.target===$("modal")) closeModal(); });
+});
+</script>
+</body>
+</html>
